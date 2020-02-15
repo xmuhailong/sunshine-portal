@@ -81,7 +81,7 @@
     name: "SuccessCase",
     data() {
       return {
-        caseTip: require('../assets/case.png'),
+        caseTip: require('../../assets/case.png'),
       }
     }
   }

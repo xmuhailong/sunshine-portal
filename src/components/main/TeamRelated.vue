@@ -5,7 +5,7 @@
         <el-tabs v-model="activeName">
           <el-tab-pane label="团队介绍" name="first">
             <el-card :body-style="{ padding: '0px', border: none }">
-              <img src="../assets/team-brf-intdct.jpg" style="width: 100%; ">
+              <img src="../../assets/team-brf-intdct.jpg" style="width: 100%; ">
               <div style="padding: 14px;">
                 <span>好吃的汉堡</span>
                 <div class="team-brf">
@@ -60,8 +60,8 @@
     name: "TeamRelated",
     data() {
       return {
-        teamActives1: require('../assets/team-actives-1.jpg'),
-        teamActives2: require('../assets/team-actives-2.jpg'),
+        teamActives1: require('../../assets/team-actives-1.jpg'),
+        teamActives2: require('../../assets/team-actives-2.jpg'),
         activeName: 'first',
       }
     }
@@ -83,10 +83,5 @@
   .el-card {
     border: none;
     border-radius: 0px;
-  }
-
-  .carousel-img {
-    max-width: 100%;
-    max-height: 100%;
   }
 </style>

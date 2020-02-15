@@ -10,7 +10,7 @@
       <el-row type="flex" justify="center" :gutter="50">
         <el-col :span="20">
           <el-carousel :interval="4000" type="card" height="500px">
-            <el-carousel-item v-for="item in laywersImgs" :key="item" align="center">
+            <el-carousel-item v-for="(item, index) in laywersImgs" :key="index" align="center">
               <img :src="item.photo" :alt="item.name" style="width: 420px;" class="class_outer"/>
               <div class="class_cover">
                 <h2>{{ item.name }} 律师</h2>
@@ -38,47 +38,47 @@
         laywersImgs: [
           {
             name: 'songbin',
-            photo: require("../assets/songbin.jpg"),
+            photo: require("../../assets/songbin.jpg"),
             place: '北京市盈科（深圳）律师事务所执业律师'
           },
           {
             name: 'hanjian',
-            photo: require("../assets/hanjian.jpg"),
+            photo: require("../../assets/hanjian.jpg"),
             place: '北京市盈科（深圳）律师事务所执业律师'
           },
           {
             name: 'liuyanhua',
-            photo: require("../assets/liuyanhua.jpg"),
+            photo: require("../../assets/liuyanhua.jpg"),
             place: '北京市盈科（深圳）律师事务所执业律师'
           },
           {
             name: 'yangguanghua',
-            photo: require("../assets/yangguagnhua.jpg"),
+            photo: require("../../assets/yangguagnhua.jpg"),
             place: '北京市盈科（深圳）律师事务所执业律师'
           },
           {
             name: 'yanglidi',
-            photo: require("../assets/yanglidi.jpg"),
+            photo: require("../../assets/yanglidi.jpg"),
             place: '北京市盈科（深圳）律师事务所执业律师'
           },
           {
             name: 'yangxiaoli',
-            photo: require("../assets/yangxiaoli.jpg"),
+            photo: require("../../assets/yangxiaoli.jpg"),
             place: '北京市盈科（深圳）律师事务所执业律师'
           },
           {
             name: 'yangyu',
-            photo: require("../assets/yanyu.jpg"),
+            photo: require("../../assets/yanyu.jpg"),
             place: '北京市盈科（深圳）律师事务所执业律师'
           },
           {
             name: 'yehuijuan',
-            photo: require("../assets/yehuijuan.jpg"),
+            photo: require("../../assets/yehuijuan.jpg"),
             place: '北京市盈科（深圳）律师事务所执业律师'
           },
           {
             name: 'zhoufei',
-            photo: require("../assets/zhoufei.jpg"),
+            photo: require("../../assets/zhoufei.jpg"),
             place: '北京市盈科（深圳）律师事务所执业律师'
           }
         ]

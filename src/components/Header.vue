@@ -4,7 +4,7 @@
     <el-row type="flex" align="middle" class="header">
       <el-col :span="8" class="logo"><img src="../assets/logo.jpg"/></el-col>
       <el-col :span="14" class="nav">
-        <el-menu :default-active="activeIndex"
+        <el-menu
                  class="el-menu-demo"
                  mode="horizontal"
                  active-text-color="red">
@@ -35,8 +35,6 @@
 </script>
 
 <style scoped lang="less">
-
-
   .container {
     .header {
       width: 100%;
@@ -47,10 +45,6 @@
         // 水平居中
         justify-content: center;
         align-items: center;
-      }
-
-      .nav {
-
       }
 
       // 去掉按钮下方的横线
