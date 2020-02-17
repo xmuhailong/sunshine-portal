@@ -14,7 +14,7 @@
                     成章家族法律事务团队是由北京市中闻（深圳）律师事务所主任杨广华律师领衔的家族法律事务律师团队。
                     成章家族法律事务团队立足家族企业法律事务，结合深圳民营企业家的发展服务需求团结志同道合的中闻法律人……
                   </p>
-                  <el-button type="info" plain>查看更多</el-button>
+                  <el-button type="info" plain @click="showArticle()">查看更多</el-button>
                 </div>
               </div>
             </el-card>
@@ -56,6 +56,8 @@
 </template>
 
 <script>
+
+
   export default {
     name: "TeamRelated",
     data() {
@@ -63,6 +65,11 @@
         teamActives1: require('../../assets/team-actives-1.jpg'),
         teamActives2: require('../../assets/team-actives-2.jpg'),
         activeName: 'first',
+      }
+    },
+    methods: {
+      showArticle : function () {
+        this.$router.push({ name: 'article', params: { id: '123' }});
       }
     }
   }

@@ -23,7 +23,7 @@
 
       <el-row>
         <el-col :span="24" style="text-align: center; margin-top: 50px">
-          <el-button type="info" plain>查看更多</el-button>
+          <el-button type="info" plain >查看更多</el-button>
         </el-col>
       </el-row>
     </el-row>

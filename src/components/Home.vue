@@ -16,7 +16,7 @@
   import Header from './Header'
 
   export default {
-    name: 'HelloWorld',
+    name: 'Home',
     components: {
       Footer,
       Header,

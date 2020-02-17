@@ -3,9 +3,9 @@
     <!-- 轮播图 -->
     <el-row>
       <el-col :span="24">
-        <el-carousel :interval="5000" arrow="always" height="500px">
+        <el-carousel :interval="5000" arrow="always" :height="bannerHeight + 'px'">
           <el-carousel-item v-for="(item,index) in carouselImages" :key="index">
-            <img :src="item.idView" class="carousel-img">
+            <img :src="item.idView" class="carousel-img" ref="image" @load="imageLoaded">
           </el-carousel-item>
         </el-carousel>
       </el-col>
@@ -46,6 +46,23 @@
             idView: require("../../assets/nav-2.jpg")
           }
         ],
+        bannerHeight: 1,
+        imageCount: 0
+      }
+    },
+    mounted () {
+      window.addEventListener('resize', () => {
+        this.bannerHeight = this.$refs.image[0].height
+      }, false)
+    },
+    methods: {
+      imageLoaded() {
+        this.imageCount ++ ;
+
+        if (this.imageCount === 1) {
+          // 加载第一张图片的时候获取高度
+          this.bannerHeight = this.$refs.image[0].height;
+        }
       }
     }
   }
@@ -53,7 +70,6 @@
 
 <style scoped lang="less">
   .carousel-img {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
   }
 </style>
